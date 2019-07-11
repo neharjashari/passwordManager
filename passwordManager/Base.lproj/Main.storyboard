@@ -54,21 +54,31 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GgI-nF-auO">
-                                <rect key="frame" x="183" y="586" width="49" height="36"/>
+                                <rect key="frame" x="184" y="586" width="49" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="onClickLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Pf-gx-KJu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="773-WM-IlP">
                                 <rect key="frame" x="85" y="653" width="246" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Don't have an account yet? Sign Up here"/>
+                                <connections>
+                                    <action selector="goToSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rho-N5-B6T"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.8173028826713562" green="0.90500813722610474" blue="0.95311099290847778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="password" destination="6bU-92-sFn" id="VxN-1W-rr6"/>
+                        <outlet property="username" destination="l5S-Lk-1pb" id="0uE-Kg-nfd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
