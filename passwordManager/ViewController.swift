@@ -18,10 +18,20 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    // Build in function for removing the keyboard after you click away from it
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     // on click event for the Login Button
     @IBAction func onClickLogin(_ sender: UIButton) {
         // the sender is the object that called this method
+        
+        // do not make first responder either one of the text fields
+        self.username.resignFirstResponder()
+        self.password.resignFirstResponder()
+        
+        
         
     }
     
