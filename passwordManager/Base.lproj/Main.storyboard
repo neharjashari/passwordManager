@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ScG-F0-9Pd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gta-sf-Ilh">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -70,7 +70,7 @@
                                 <state key="normal" title="Don't have an account yet? Sign Up here"/>
                                 <connections>
                                     <action selector="goToSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rho-N5-B6T"/>
-                                    <segue destination="pzl-9a-aIN" kind="show" id="87W-vJ-89p"/>
+                                    <segue destination="pzl-9a-aIN" kind="show" id="vsA-S9-CXI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -87,10 +87,10 @@
             </objects>
             <point key="canvasLocation" x="1889.8550724637682" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View View Controller-->
         <scene sceneID="jTy-8h-cLS">
             <objects>
-                <viewController id="pzl-9a-aIN" sceneMemberID="viewController">
+                <viewController id="pzl-9a-aIN" customClass="SignUpViewViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MZX-B7-2fr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,6 +135,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Create Account"/>
+                                <connections>
+                                    <action selector="createAccount:" destination="pzl-9a-aIN" eventType="touchUpInside" id="gJD-9A-hiM"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ok-Dt-At5">
                                 <rect key="frame" x="204" y="229" width="165" height="30"/>
@@ -175,21 +178,31 @@
                                 <rect key="frame" x="126" y="616" width="162" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Get Back To Login View"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="qzu-FO-lAu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="WgJ-fZ-mNu"/>
                     </view>
                     <navigationItem key="navigationItem" id="KsJ-eQ-ycg"/>
+                    <connections>
+                        <outlet property="confirmPass" destination="du8-tc-QA4" id="4qd-2W-96Z"/>
+                        <outlet property="email" destination="th8-AU-1Em" id="p2Q-qc-CXC"/>
+                        <outlet property="name" destination="0ok-Dt-At5" id="Knw-zy-o7h"/>
+                        <outlet property="password" destination="22Y-bO-VpN" id="zKw-Xe-SL2"/>
+                        <outlet property="username" destination="9iA-pz-8N6" id="HxX-Us-5d4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dMg-Wa-9i5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2633.3333333333335" y="137.94642857142856"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Main Table View Controller-->
         <scene sceneID="clX-pN-Msh">
             <objects>
-                <tableViewController id="9LK-mF-3kl" sceneMemberID="viewController">
+                <tableViewController id="9LK-mF-3kl" customClass="MainTableViewController" customModule="passwordManager" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Tx7-8U-tB0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,6 +227,48 @@
             </objects>
             <point key="canvasLocation" x="980" y="825"/>
         </scene>
+        <!--Database Test View Controller-->
+        <scene sceneID="fkK-aE-ENS">
+            <objects>
+                <viewController id="gta-sf-Ilh" customClass="DatabaseTestViewController" customModule="passwordManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kE4-sr-ba3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zh-My-P2e">
+                                <rect key="frame" x="164" y="147" width="87" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Create Table"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGZ-hC-6pi">
+                                <rect key="frame" x="169" y="233" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Insert User"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVH-dP-0ZC">
+                                <rect key="frame" x="173" y="315" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="List Users"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YM9-Td-wec">
+                                <rect key="frame" x="167" y="512" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Delete User"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIx-BI-lOy">
+                                <rect key="frame" x="164" y="410" width="87" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Update User"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="a0e-rj-myp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y0B-Nf-fjn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1925" y="836"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zpd-Vc-VNj">
             <objects>
@@ -233,4 +288,7 @@
             <point key="canvasLocation" x="979.71014492753636" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qzu-FO-lAu"/>
+    </inferredMetricsTieBreakers>
 </document>

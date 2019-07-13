@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SQLite3
+
 
 class ViewController: UIViewController {
 
@@ -32,12 +34,19 @@ class ViewController: UIViewController {
         self.password.resignFirstResponder()
         
         
+        let alert = UIAlertController(title: "Login", message: "You have logged in!", preferredStyle: .alert)
         
+        alert.addAction(UIAlertAction(title: "Okay", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
     }
     
-    // if don't have account go to sign up view to create one
-    @IBAction func goToSignUp(_ sender: Any) {
-        
-    }
+    
+    // DB part
+
+    
+    
+    
+    
 }
 
