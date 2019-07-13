@@ -17,6 +17,7 @@ class DatabaseTestViewController: UIViewController {
     let id = Expression<Int>("id")
     let name = Expression<String>("name")
     let email = Expression<String>("email")
+    let password = Expression<String>("password")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,7 @@ class DatabaseTestViewController: UIViewController {
         }
     }
     
+    
     @IBAction func createTable() {
         print("CREATE TAPPED")
         
@@ -38,14 +40,16 @@ class DatabaseTestViewController: UIViewController {
             table.column(self.id, primaryKey: true)
             table.column(self.name)
             table.column(self.email, unique: true)
+            table.column(self.password)
         }
         
         do {
             try self.database.run(createTable)
-            print("Created Table")
         } catch {
             print(error)
         }
+        
+        print("Created Table")
     }
     
     @IBAction func insertUser() {
@@ -60,7 +64,7 @@ class DatabaseTestViewController: UIViewController {
             print(name)
             print(email)
             
-            let insertUser = self.usersTable.insert(self.name <- name, self.email <- email)
+            let insertUser = self.usersTable.insert(self.name <- name, self.email <- email, self.password <- "nehari123")
             
             do {
                 try self.database.run(insertUser)
@@ -81,7 +85,7 @@ class DatabaseTestViewController: UIViewController {
         do {
             let users = try self.database.prepare(self.usersTable)
             for user in users {
-                print("userId: \(user[self.id]), name: \(user[self.name]), email: \(user[self.email])")
+                print("userId: \(user[self.id]), name: \(user[self.name]), email: \(user[self.email]), password: \(user[self.password])")
             }
         } catch {
             print(error)
@@ -134,4 +138,5 @@ class DatabaseTestViewController: UIViewController {
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
+    
 }
