@@ -14,12 +14,14 @@
 		4597508222D47B6000668E1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4597508022D47B6000668E1A /* LaunchScreen.storyboard */; };
 		4597508D22D47B6000668E1A /* passwordManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597508C22D47B6000668E1A /* passwordManagerTests.swift */; };
 		4597509822D47B6000668E1A /* passwordManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597509722D47B6000668E1A /* passwordManagerUITests.swift */; };
-		459750AA22D4813F00668E1A /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459750A922D4813F00668E1A /* MainTableViewController.swift */; };
 		459750C422D7C65400668E1A /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459750B622D7C5FB00668E1A /* SQLite.framework */; };
 		459750C522D7C68B00668E1A /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459750B622D7C5FB00668E1A /* SQLite.framework */; };
 		459750C622D7C68B00668E1A /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 459750B622D7C5FB00668E1A /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		459750CF22D9F01C00668E1A /* DatabaseTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459750CE22D9F01C00668E1A /* DatabaseTestViewController.swift */; };
 		459750D122DA125A00668E1A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459750D022DA125A00668E1A /* SignUpViewController.swift */; };
+		459750D322DA205A00668E1A /* Passwords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459750D222DA205A00668E1A /* Passwords.swift */; };
+		459750D522DA20E300668E1A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459750D422DA20E300668E1A /* MainViewController.swift */; };
+		459750D722DB7BF500668E1A /* passwordDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459750D622DB7BF500668E1A /* passwordDB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,10 +125,12 @@
 		4597509322D47B6000668E1A /* passwordManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = passwordManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4597509722D47B6000668E1A /* passwordManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passwordManagerUITests.swift; sourceTree = "<group>"; };
 		4597509922D47B6000668E1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		459750A922D4813F00668E1A /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		459750AB22D7C5FB00668E1A /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../Downloads/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		459750CE22D9F01C00668E1A /* DatabaseTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseTestViewController.swift; sourceTree = "<group>"; };
 		459750D022DA125A00668E1A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		459750D222DA205A00668E1A /* Passwords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passwords.swift; sourceTree = "<group>"; };
+		459750D422DA20E300668E1A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		459750D622DB7BF500668E1A /* passwordDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passwordDB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,9 +191,11 @@
 				4597507E22D47B6000668E1A /* Assets.xcassets */,
 				4597508022D47B6000668E1A /* LaunchScreen.storyboard */,
 				4597508322D47B6000668E1A /* Info.plist */,
-				459750A922D4813F00668E1A /* MainTableViewController.swift */,
 				459750CE22D9F01C00668E1A /* DatabaseTestViewController.swift */,
 				459750D022DA125A00668E1A /* SignUpViewController.swift */,
+				459750D222DA205A00668E1A /* Passwords.swift */,
+				459750D422DA20E300668E1A /* MainViewController.swift */,
+				459750D622DB7BF500668E1A /* passwordDB.swift */,
 			);
 			path = passwordManager;
 			sourceTree = "<group>";
@@ -424,9 +430,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				459750D722DB7BF500668E1A /* passwordDB.swift in Sources */,
+				459750D322DA205A00668E1A /* Passwords.swift in Sources */,
 				459750D122DA125A00668E1A /* SignUpViewController.swift in Sources */,
-				459750AA22D4813F00668E1A /* MainTableViewController.swift in Sources */,
 				4597507A22D47B5F00668E1A /* ViewController.swift in Sources */,
+				459750D522DA20E300668E1A /* MainViewController.swift in Sources */,
 				4597507822D47B5F00668E1A /* AppDelegate.swift in Sources */,
 				459750CF22D9F01C00668E1A /* DatabaseTestViewController.swift in Sources */,
 			);

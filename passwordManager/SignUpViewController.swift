@@ -68,6 +68,33 @@ class SignUpViewController: UIViewController {
         let fullnameDB = fullnameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         let emailDB = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         let passwordDB = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let confirmPassword = confirmPassTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        //validating that values are not empty
+        if(fullnameDB?.isEmpty)!{
+            fullnameTextField.layer.borderWidth = 1.0
+            fullnameTextField.layer.borderColor = UIColor.red.cgColor
+            return
+        }
+        
+        if(emailDB?.isEmpty)!{
+            emailTextField.layer.borderWidth = 1.0
+            emailTextField.layer.borderColor = UIColor.red.cgColor
+            return
+        }
+        
+        if(passwordDB?.isEmpty)!{
+            passwordTextField.layer.borderWidth = 1.0
+            passwordTextField.layer.borderColor = UIColor.red.cgColor
+            return
+        }
+        
+        // Confirm password validation
+        if(confirmPassword != passwordDB){
+            confirmPassTextField.layer.borderWidth = 1.0
+            confirmPassTextField.layer.borderColor = UIColor.red.cgColor
+            return
+        }
         
         print(fullnameDB!)
         print(emailDB!)
@@ -81,6 +108,13 @@ class SignUpViewController: UIViewController {
         } catch {
             print(error)
         }
+        
+        // Alert
+        let alert = UIAlertController(title: "Database", message: "Your account was created.", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Continue", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
         
         
     }
