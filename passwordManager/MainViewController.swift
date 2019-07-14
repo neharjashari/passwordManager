@@ -10,19 +10,6 @@ import UIKit
 
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PasswordCell")!
-        var label: UILabel
-        label = cell.viewWithTag(1) as! UILabel // Name label
-        label.text = passwords[indexPath.row].domain
-        
-        label = cell.viewWithTag(2) as! UILabel // Phone label
-        label.text = passwords[indexPath.row].password
-        
-        return cell
-        
-    }
-    
     // Build in function for removing the keyboard after you click away from it
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -45,7 +32,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         domainTextField.text = passwords[indexPath.row].domain
         passwordTextField.text = passwords[indexPath.row].password
         
@@ -56,9 +43,25 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return passwords.count
     }
+
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PasswordCell", for: indexPath)
+        
+        var label: UILabel
+        
+        label = cell.viewWithTag(1) as! UILabel // Domain label
+        label.text = passwords[indexPath.row].domain
+        
+        label = cell.viewWithTag(2) as! UILabel // Password label
+        label.text = passwords[indexPath.row].password
+        
+        return cell
+    }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    /*
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "PasswordCell")!
         var label: UILabel
@@ -70,7 +73,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         return cell
     }
-    
+    */
     
     @IBAction func addButtonClicked(_ sender: UIButton) {
         let domainVal = domainTextField.text ?? ""
