@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SQLite3
+import SQLite
 
 
 class ViewController: UIViewController {
@@ -15,9 +15,41 @@ class ViewController: UIViewController {
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     
+    var database: Connection!
+    
+    let usersTable = Table("users")
+    let idCol = Expression<Int>("id")
+    let nameCol = Expression<String>("name")
+    let emailCol = Expression<String>("email")
+    let passwordCol = Expression<String>("password")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        do {
+            let documentDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            let fileUrl = documentDirectory.appendingPathComponent("users").appendingPathExtension("sqlite3")
+            let database = try Connection(fileUrl.path)
+            self.database = database
+        } catch {
+            print(error)
+        }
+        
+        
+        let createTable = self.usersTable.create { (table) in
+            table.column(self.idCol, primaryKey: true)
+            table.column(self.nameCol)
+            table.column(self.emailCol, unique: true)
+            table.column(self.passwordCol)
+        }
+        
+        do {
+            try self.database.run(createTable)
+        } catch {
+            print(error)
+        }
+        
+        print("Created Table")
     }
 
     // Build in function for removing the keyboard after you click away from it
@@ -33,20 +65,30 @@ class ViewController: UIViewController {
         self.username.resignFirstResponder()
         self.password.resignFirstResponder()
         
+        //getting values from textfields
+        let usernameLogin = username.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let passwordLogin = password.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         
+        print(usernameLogin!)
+        print(passwordLogin!)
+        
+        do {
+            for user in try self.database.prepare(usersTable) {
+                print("id: \(user[idCol]), email: \(user[emailCol]), password: \(user[passwordCol])")
+            }
+        } catch {
+            print(error)
+        }
+        
+        /*
         let alert = UIAlertController(title: "Login", message: "You have logged in!", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Okay", style: .cancel, handler: nil))
         
-        self.present(alert, animated: true)
+        self.present(alert, animated: true)*/
     }
     
-    
-    // DB part
 
-    
-    
-    
     
 }
 
