@@ -74,18 +74,22 @@ class ViewController: UIViewController {
         
         do {
             for user in try self.database.prepare(usersTable) {
-                print("id: \(user[idCol]), email: \(user[emailCol]), password: \(user[passwordCol])")
+                if (user[emailCol] == usernameLogin && user[passwordCol] == passwordLogin) {
+                    print("User logged.")
+                    print("id: \(user[idCol]), email: \(user[emailCol]), password: \(user[passwordCol])")
+                } else {
+                    
+                    let alert = UIAlertController(title: "Login", message: "The username or password you typed are not correct!", preferredStyle: .alert)
+                     
+                    alert.addAction(UIAlertAction(title: "Okay", style: .cancel, handler: nil))
+                     
+                    self.present(alert, animated: true)
+                }
             }
         } catch {
             print(error)
         }
         
-        /*
-        let alert = UIAlertController(title: "Login", message: "You have logged in!", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "Okay", style: .cancel, handler: nil))
-        
-        self.present(alert, animated: true)*/
     }
     
 
