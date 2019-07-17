@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		450AF91022DF4EB1004CF2FE /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 450AF8EB22DF4CC7004CF2FE /* SQLite.framework */; };
+		450AF91222DFC3EB004CF2FE /* PasswordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450AF91122DFC3EB004CF2FE /* PasswordTableViewCell.swift */; };
 		4597507822D47B5F00668E1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597507722D47B5F00668E1A /* AppDelegate.swift */; };
 		4597507A22D47B5F00668E1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597507922D47B5F00668E1A /* ViewController.swift */; };
 		4597507D22D47B5F00668E1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4597507B22D47B5F00668E1A /* Main.storyboard */; };
@@ -103,6 +104,7 @@
 
 /* Begin PBXFileReference section */
 		450AF8E022DF4CC7004CF2FE /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../Downloads/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
+		450AF91122DFC3EB004CF2FE /* PasswordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTableViewCell.swift; sourceTree = "<group>"; };
 		4597507422D47B5F00668E1A /* passwordManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = passwordManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4597507722D47B5F00668E1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4597507922D47B5F00668E1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				459750D222DA205A00668E1A /* Passwords.swift */,
 				459750D422DA20E300668E1A /* MainViewController.swift */,
 				459750D622DB7BF500668E1A /* passwordDB.swift */,
+				450AF91122DFC3EB004CF2FE /* PasswordTableViewCell.swift */,
 			);
 			path = passwordManager;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				459750D322DA205A00668E1A /* Passwords.swift in Sources */,
 				459750D122DA125A00668E1A /* SignUpViewController.swift in Sources */,
 				4597507A22D47B5F00668E1A /* ViewController.swift in Sources */,
+				450AF91222DFC3EB004CF2FE /* PasswordTableViewCell.swift in Sources */,
 				459750D522DA20E300668E1A /* MainViewController.swift in Sources */,
 				4597507822D47B5F00668E1A /* AppDelegate.swift in Sources */,
 				459750CF22D9F01C00668E1A /* DatabaseTestViewController.swift in Sources */,

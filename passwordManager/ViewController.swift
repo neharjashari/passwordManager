@@ -75,8 +75,12 @@ class ViewController: UIViewController {
         do {
             for user in try self.database.prepare(usersTable) {
                 if (user[emailCol] == usernameLogin && user[passwordCol] == passwordLogin) {
-                    print("User logged.")
-                    print("id: \(user[idCol]), email: \(user[emailCol]), password: \(user[passwordCol])")
+                    print("User logged in.")
+                    print("id: \(user[idCol]), fullname: \(user[nameCol]), email: \(user[emailCol]), password: \(user[passwordCol])")
+                    
+                    // open another view programmatically
+                    let nextViewController = MainViewController()
+                    self.present(nextViewController, animated:true, completion:nil)
                 } else {
                     
                     let alert = UIAlertController(title: "Login", message: "The username or password you typed are not correct!", preferredStyle: .alert)
