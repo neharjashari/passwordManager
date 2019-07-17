@@ -9,10 +9,23 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>passwordManager.xcscheme_^#shared#^_</key>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>4597507322D47B5F00668E1A</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4597508722D47B6000668E1A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4597509222D47B6000668E1A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
