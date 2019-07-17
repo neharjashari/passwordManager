@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		450AF91022DF4EB1004CF2FE /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 450AF8EB22DF4CC7004CF2FE /* SQLite.framework */; };
 		4597507822D47B5F00668E1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597507722D47B5F00668E1A /* AppDelegate.swift */; };
 		4597507A22D47B5F00668E1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597507922D47B5F00668E1A /* ViewController.swift */; };
 		4597507D22D47B5F00668E1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4597507B22D47B5F00668E1A /* Main.storyboard */; };
@@ -14,9 +15,6 @@
 		4597508222D47B6000668E1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4597508022D47B6000668E1A /* LaunchScreen.storyboard */; };
 		4597508D22D47B6000668E1A /* passwordManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597508C22D47B6000668E1A /* passwordManagerTests.swift */; };
 		4597509822D47B6000668E1A /* passwordManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597509722D47B6000668E1A /* passwordManagerUITests.swift */; };
-		459750C422D7C65400668E1A /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459750B622D7C5FB00668E1A /* SQLite.framework */; };
-		459750C522D7C68B00668E1A /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459750B622D7C5FB00668E1A /* SQLite.framework */; };
-		459750C622D7C68B00668E1A /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 459750B622D7C5FB00668E1A /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		459750CF22D9F01C00668E1A /* DatabaseTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459750CE22D9F01C00668E1A /* DatabaseTestViewController.swift */; };
 		459750D122DA125A00668E1A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459750D022DA125A00668E1A /* SignUpViewController.swift */; };
 		459750D322DA205A00668E1A /* Passwords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459750D222DA205A00668E1A /* Passwords.swift */; };
@@ -25,6 +23,55 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		450AF8EA22DF4CC7004CF2FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 450AF8E022DF4CC7004CF2FE /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247AD31C3F04ED00AE3E12;
+			remoteInfo = "SQLite iOS";
+		};
+		450AF8EC22DF4CC7004CF2FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 450AF8E022DF4CC7004CF2FE /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247ADD1C3F04ED00AE3E12;
+			remoteInfo = "SQLiteTests iOS";
+		};
+		450AF8EE22DF4CC7004CF2FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 450AF8E022DF4CC7004CF2FE /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247B3C1C3F3ED000AE3E12;
+			remoteInfo = "SQLite Mac";
+		};
+		450AF8F022DF4CC7004CF2FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 450AF8E022DF4CC7004CF2FE /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247B451C3F3ED000AE3E12;
+			remoteInfo = "SQLiteTests Mac";
+		};
+		450AF8F222DF4CC7004CF2FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 450AF8E022DF4CC7004CF2FE /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 03A65E5A1C6BB0F50062603F;
+			remoteInfo = "SQLite tvOS";
+		};
+		450AF8F422DF4CC7004CF2FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 450AF8E022DF4CC7004CF2FE /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 03A65E631C6BB0F60062603F;
+			remoteInfo = "SQLiteTests tvOS";
+		};
+		450AF8F622DF4CC7004CF2FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 450AF8E022DF4CC7004CF2FE /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A121AC451CA35C79005A31D1;
+			remoteInfo = "SQLite watchOS";
+		};
 		4597508922D47B6000668E1A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4597506C22D47B5F00668E1A /* Project object */;
@@ -39,62 +86,6 @@
 			remoteGlobalIDString = 4597507322D47B5F00668E1A;
 			remoteInfo = passwordManager;
 		};
-		459750B522D7C5FB00668E1A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 459750AB22D7C5FB00668E1A /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE247AD31C3F04ED00AE3E12;
-			remoteInfo = "SQLite iOS";
-		};
-		459750B722D7C5FB00668E1A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 459750AB22D7C5FB00668E1A /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE247ADD1C3F04ED00AE3E12;
-			remoteInfo = "SQLiteTests iOS";
-		};
-		459750B922D7C5FB00668E1A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 459750AB22D7C5FB00668E1A /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE247B3C1C3F3ED000AE3E12;
-			remoteInfo = "SQLite Mac";
-		};
-		459750BB22D7C5FB00668E1A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 459750AB22D7C5FB00668E1A /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE247B451C3F3ED000AE3E12;
-			remoteInfo = "SQLiteTests Mac";
-		};
-		459750BD22D7C5FB00668E1A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 459750AB22D7C5FB00668E1A /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 03A65E5A1C6BB0F50062603F;
-			remoteInfo = "SQLite tvOS";
-		};
-		459750BF22D7C5FB00668E1A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 459750AB22D7C5FB00668E1A /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 03A65E631C6BB0F60062603F;
-			remoteInfo = "SQLiteTests tvOS";
-		};
-		459750C122D7C5FB00668E1A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 459750AB22D7C5FB00668E1A /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A121AC451CA35C79005A31D1;
-			remoteInfo = "SQLite watchOS";
-		};
-		459750C722D7C68B00668E1A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 459750AB22D7C5FB00668E1A /* SQLite.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = EE247AD21C3F04ED00AE3E12;
-			remoteInfo = "SQLite iOS";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -104,7 +95,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				459750C622D7C68B00668E1A /* SQLite.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +102,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		450AF8E022DF4CC7004CF2FE /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../Downloads/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		4597507422D47B5F00668E1A /* passwordManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = passwordManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4597507722D47B5F00668E1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4597507922D47B5F00668E1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,7 +116,6 @@
 		4597509322D47B6000668E1A /* passwordManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = passwordManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4597509722D47B6000668E1A /* passwordManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passwordManagerUITests.swift; sourceTree = "<group>"; };
 		4597509922D47B6000668E1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		459750AB22D7C5FB00668E1A /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../Downloads/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		459750CE22D9F01C00668E1A /* DatabaseTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseTestViewController.swift; sourceTree = "<group>"; };
 		459750D022DA125A00668E1A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		459750D222DA205A00668E1A /* Passwords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passwords.swift; sourceTree = "<group>"; };
@@ -138,8 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				459750C522D7C68B00668E1A /* SQLite.framework in Frameworks */,
-				459750C422D7C65400668E1A /* SQLite.framework in Frameworks */,
+				450AF91022DF4EB1004CF2FE /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +149,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		450AF8E122DF4CC7004CF2FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				450AF8EB22DF4CC7004CF2FE /* SQLite.framework */,
+				450AF8ED22DF4CC7004CF2FE /* SQLiteTests iOS.xctest */,
+				450AF8EF22DF4CC7004CF2FE /* SQLite.framework */,
+				450AF8F122DF4CC7004CF2FE /* SQLiteTests Mac.xctest */,
+				450AF8F322DF4CC7004CF2FE /* SQLite.framework */,
+				450AF8F522DF4CC7004CF2FE /* SQLiteTests tvOS.xctest */,
+				450AF8F722DF4CC7004CF2FE /* SQLite.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		4597506B22D47B5F00668E1A = {
 			isa = PBXGroup;
 			children = (
@@ -167,7 +170,6 @@
 				4597508B22D47B6000668E1A /* passwordManagerTests */,
 				4597509622D47B6000668E1A /* passwordManagerUITests */,
 				4597507522D47B5F00668E1A /* Products */,
-				459750AB22D7C5FB00668E1A /* SQLite.xcodeproj */,
 				459750C322D7C65400668E1A /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -218,23 +220,10 @@
 			path = passwordManagerUITests;
 			sourceTree = "<group>";
 		};
-		459750AC22D7C5FB00668E1A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				459750B622D7C5FB00668E1A /* SQLite.framework */,
-				459750B822D7C5FB00668E1A /* SQLiteTests iOS.xctest */,
-				459750BA22D7C5FB00668E1A /* SQLite.framework */,
-				459750BC22D7C5FB00668E1A /* SQLiteTests Mac.xctest */,
-				459750BE22D7C5FB00668E1A /* SQLite.framework */,
-				459750C022D7C5FB00668E1A /* SQLiteTests tvOS.xctest */,
-				459750C222D7C5FB00668E1A /* SQLite.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		459750C322D7C65400668E1A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				450AF8E022DF4CC7004CF2FE /* SQLite.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -254,7 +243,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				459750C822D7C68B00668E1A /* PBXTargetDependency */,
 			);
 			name = passwordManager;
 			productName = passwordManager;
@@ -333,8 +321,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 459750AC22D7C5FB00668E1A /* Products */;
-					ProjectRef = 459750AB22D7C5FB00668E1A /* SQLite.xcodeproj */;
+					ProductGroup = 450AF8E122DF4CC7004CF2FE /* Products */;
+					ProjectRef = 450AF8E022DF4CC7004CF2FE /* SQLite.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -347,53 +335,53 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		459750B622D7C5FB00668E1A /* SQLite.framework */ = {
+		450AF8EB22DF4CC7004CF2FE /* SQLite.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SQLite.framework;
-			remoteRef = 459750B522D7C5FB00668E1A /* PBXContainerItemProxy */;
+			remoteRef = 450AF8EA22DF4CC7004CF2FE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		459750B822D7C5FB00668E1A /* SQLiteTests iOS.xctest */ = {
+		450AF8ED22DF4CC7004CF2FE /* SQLiteTests iOS.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "SQLiteTests iOS.xctest";
-			remoteRef = 459750B722D7C5FB00668E1A /* PBXContainerItemProxy */;
+			remoteRef = 450AF8EC22DF4CC7004CF2FE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		459750BA22D7C5FB00668E1A /* SQLite.framework */ = {
+		450AF8EF22DF4CC7004CF2FE /* SQLite.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SQLite.framework;
-			remoteRef = 459750B922D7C5FB00668E1A /* PBXContainerItemProxy */;
+			remoteRef = 450AF8EE22DF4CC7004CF2FE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		459750BC22D7C5FB00668E1A /* SQLiteTests Mac.xctest */ = {
+		450AF8F122DF4CC7004CF2FE /* SQLiteTests Mac.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "SQLiteTests Mac.xctest";
-			remoteRef = 459750BB22D7C5FB00668E1A /* PBXContainerItemProxy */;
+			remoteRef = 450AF8F022DF4CC7004CF2FE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		459750BE22D7C5FB00668E1A /* SQLite.framework */ = {
+		450AF8F322DF4CC7004CF2FE /* SQLite.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SQLite.framework;
-			remoteRef = 459750BD22D7C5FB00668E1A /* PBXContainerItemProxy */;
+			remoteRef = 450AF8F222DF4CC7004CF2FE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		459750C022D7C5FB00668E1A /* SQLiteTests tvOS.xctest */ = {
+		450AF8F522DF4CC7004CF2FE /* SQLiteTests tvOS.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "SQLiteTests tvOS.xctest";
-			remoteRef = 459750BF22D7C5FB00668E1A /* PBXContainerItemProxy */;
+			remoteRef = 450AF8F422DF4CC7004CF2FE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		459750C222D7C5FB00668E1A /* SQLite.framework */ = {
+		450AF8F722DF4CC7004CF2FE /* SQLite.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SQLite.framework;
-			remoteRef = 459750C122D7C5FB00668E1A /* PBXContainerItemProxy */;
+			remoteRef = 450AF8F622DF4CC7004CF2FE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -468,11 +456,6 @@
 			isa = PBXTargetDependency;
 			target = 4597507322D47B5F00668E1A /* passwordManager */;
 			targetProxy = 4597509422D47B6000668E1A /* PBXContainerItemProxy */;
-		};
-		459750C822D7C68B00668E1A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "SQLite iOS";
-			targetProxy = 459750C722D7C68B00668E1A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

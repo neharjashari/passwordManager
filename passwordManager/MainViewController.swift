@@ -28,6 +28,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         passwordsTableView.dataSource = self
         passwordsTableView.delegate = self
         
+        // do not make first responder either one of the text fields
+        self.domainTextField.resignFirstResponder()
+        self.passwordTextField.resignFirstResponder()
+        
         passwords = passwordDB.instance.getPassword()
     }
     
