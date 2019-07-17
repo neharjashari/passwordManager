@@ -117,9 +117,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBAction func deleteButtonClicked(_ sender: UIButton) {
         if selectedPassword != nil {
+            let id = passwords[selectedPassword!].id!
+            
             passwords.remove(at: selectedPassword!)
             
-            _ = passwordDB.instance.deletePassword(cid: passwords[selectedPassword!].id!)
+            passwordDB.instance.deletePassword(cid: id)
             
             passwordsTableView.deleteRows(at: [NSIndexPath(row: selectedPassword!, section: 0) as IndexPath], with: .fade)
         } else {
