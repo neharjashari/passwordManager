@@ -26,6 +26,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Hide text in password
+        password.isSecureTextEntry = true
+        
         do {
             let documentDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
             let fileUrl = documentDirectory.appendingPathComponent("users").appendingPathExtension("sqlite3")

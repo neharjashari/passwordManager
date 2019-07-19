@@ -28,6 +28,9 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        passwordTextField.isSecureTextEntry = true
+        confirmPassTextField.isSecureTextEntry = true
+        
         do {
             let documentDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
             let fileUrl = documentDirectory.appendingPathComponent("users").appendingPathExtension("sqlite3")
