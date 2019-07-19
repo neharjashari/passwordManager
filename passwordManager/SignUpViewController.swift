@@ -123,14 +123,25 @@ class SignUpViewController: UIViewController {
     @IBAction func listUsers(_ sender: UIButton) {
         print("LIST TAPPED")
         
-        do {
-            let users = try self.database.prepare(self.usersTable)
-            for user in users {
-                print("userId: \(user[self.idCol]), name: \(user[self.nameCol]), email: \(user[self.emailCol]), password: \(user[self.passwordCol])")
+        let alert = UIAlertController(title: "Admin", message: nil, preferredStyle: .alert)
+        alert.addTextField { (tf) in tf.placeholder = "Password" }
+        let action = UIAlertAction(title: "List Users", style: .default) { (_) in
+            guard let passwordAdmin = alert.textFields?.first?.text
+                else { return }
+            if passwordAdmin == "admin" {
+                do {
+                    let users = try self.database.prepare(self.usersTable)
+                    for user in users {
+                        print("userId: \(user[self.idCol]), name: \(user[self.nameCol]), email: \(user[self.emailCol]), password: \(user[self.passwordCol])")
+                    }
+                } catch {
+                    print(error)
+                }
             }
-        } catch {
-            print(error)
         }
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+        
     }
     
 }
