@@ -19,8 +19,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordsTableView: UITableView!
     
-    
-    
     private var passwords = [Passwords]()
     private var selectedPassword: Int?
     
@@ -37,6 +35,14 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         passwords = passwordDB.instance.getPassword()
     }
     
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//
+//        passwordsTableView.dataSource = self
+//        passwordsTableView.delegate = self
+//    }
+//
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         domainTextField.text = passwords[indexPath.row].domain
@@ -55,34 +61,12 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "PasswordCell", for: indexPath) as! PasswordTableViewCell
         
-        /*var label: UILabel
-        
-        label = cell.viewWithTag(1) as! UILabel // Domain label
-        label.text = passwords[indexPath.row].domain
-        
-        label = cell.viewWithTag(2) as! UILabel // Password label
-        label.text = passwords[indexPath.row].password*/
-        
         cell.myFirstCellLabel.text = passwords[indexPath.row].domain
         cell.mySecondCellLabel.text = passwords[indexPath.row].password
         
         return cell
     }
     
-    /*
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PasswordCell")!
-        var label: UILabel
-        label = cell.viewWithTag(1) as! UILabel // Name label
-        label.text = passwords[indexPath.row].domain
-        
-        label = cell.viewWithTag(2) as! UILabel // Phone label
-        label.text = passwords[indexPath.row].password
-        
-        return cell
-    }
-    */
     
     @IBAction func addButtonClicked(_ sender: UIButton) {
         let domainVal = domainTextField.text ?? ""
